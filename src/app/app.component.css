@@ -1,0 +1,121 @@
+.main {
+  display: flex;
+}
+.div1 {
+  height: 94vh;
+  width: 45%;
+  padding: 5px;
+}
+.div2 {
+  background: lightgrey;
+  height: inherit;
+  padding: 10px;
+}
+.div2 table {
+  padding-bottom: 10px;
+}
+.div3 {
+  height: 70%;
+  overflow: auto;
+}
+.div4 {
+  border-radius: 8px;
+  background-color: white;
+  height: 5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center
+}
+.div5 {
+  border-radius: 5px;
+  height: 3rem;
+  background-color: white;
+  text-align: center;
+  display: flex;
+  padding-top: 6px;
+  flex-direction: column;
+  justify-content: center;
+}
+.div5 input {
+  max-width: 13px;
+  padding-left: 8px;
+}
+.button1 {
+  border-radius: 100%;
+  border: 0;
+  background-color: red;
+  font-size: 20px;
+  color: white;
+}
+.input2 {
+  background-color: #DDDDDD;
+  border: 0;
+}
+
+.lower-table {
+  background-color: white;
+}
+.lower-table tr {
+  width: 100%;
+}
+
+.lower-table th {
+  height: 20px;
+  padding: 2px;
+  text-align: left;
+  background-color: #f7f1f1;
+  width: 35%;
+  border-top: 1px solid #DDD;
+}
+
+.lower-table td {
+  text-align: left;
+  width: 55.8%;
+  border-top: 1px solid #DDD;
+}
+.lower-table table {
+  border-collapse: collapse;
+}
+.div6 {
+  display: flex;
+  justify-content: space-between;
+}
+.div6 div {
+  padding: 10px;
+  width: 100%;
+}
+.div6 button {
+  color: white;
+  border: 0;
+  padding: 15px;
+  border-radius: 5px;
+  width: 100%;
+}
+.div7 {
+  height: 94vh;
+  width: 55%;
+  padding: 5px;
+}
+.div8 {
+  background: lightgrey;
+  height: inherit;
+  padding: 10px;
+  /*display: flex;*/
+}
+.column {
+  float: left;
+  width: fit-content;
+  padding: 21px;
+  height: fit-content;
+}
+.column img {
+  border-radius: 10px;
+}
+.column p {
+  color: white;
+  margin: 0;
+  text-align: center;
+  position: relative;
+  bottom: 80px;
+}

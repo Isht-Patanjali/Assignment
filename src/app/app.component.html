@@ -1,0 +1,88 @@
+<div class="row main" style="">
+  <div style="" class="col-md-4 div1">
+    <div class="div2" style="">
+      <table style="">
+        <tr>
+          <th style="width: 12rem">PRODUCTS</th>
+          <th style="width: 6rem">PRICE</th>
+          <th style="width: 6rem">QUANTITY</th>
+          <th style="width: 12rem; text-align: end; padding-right: 35px;">TOTAL</th>
+        </tr>
+      </table>
+      <div class="div3" style="">
+        <div *ngIf="!this.flag">
+          <div class="div4"
+            style="">
+            <h3>THERE ARE NO PRODUCTS</h3>
+          </div>
+        </div>
+        <div *ngFor="let product of data; let i = index" style="padding: 5px">
+          <div class="div5"
+               style="">
+            <table>
+              <tr>
+                <td style="width: 0">
+                  <button (click)="deleteItem(i)" style="" type="button" class="close button1" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                  </button>
+                </td>
+                <td style="max-width: 55px; min-width: 55px">{{product.name}}</td>
+                <td style="text-align: end">{{product.price}}</td>
+                <td>
+                  <button (click)="decreaseItem(i)">-</button>
+                  <input style="" readonly value="{{product.quantity}}">
+                  <button (click)="increaseItem(i)">+</button>
+                </td>
+                <td style="text-align: end; padding-right: 10px">{{product.total}} INR</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="lower-table" style="">
+        <table>
+          <tr>
+            <th>SubTotal</th>
+            <td>{{tableSubTotal}} INR</td>
+            <td style="font-weight: bold; text-align: right">{{tableQuantity}} items</td>
+          </tr>
+          <tr>
+            <th>VAT tax</th>
+            <td><input type="number" (change)="tableData()" (press)="tableData()" [(ngModel)]="vat" class="input2" style="">%</td>
+            <td style="font-weight: bold; text-align: right">{{vatDisplay}} INR</td>
+          </tr>
+          <tr>
+            <th>Discount</th>
+            <td><input type="number" (change)="tableData()" (press)="tableData()" [(ngModel)]="discount" class="input2" style="">%</td>
+            <td style="font-weight: bold; text-align: right">{{discountDisplay}} INR</td>
+          </tr>
+          <tr>
+            <th>Total</th>
+            <td style="color: aqua">{{tableTotal}} INR</td>
+            <td></td>
+          </tr>
+        </table>
+      </div>
+      <div class="div6" style="">
+        <div style="">
+          <button style="background-color: red">CANCEL SALE</button>
+        </div>
+        <div style="">
+          <button (click)="receipt()" style="background-color: green">PROCESS SALE</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row div7" style="">
+    <div class="div8" style="">
+      <div class="row">
+      <div class="column" *ngFor="let item of itemName" style="">
+        <img (mouseover)="toggle()" (mouseleave)="toggle()" (click)="addItemImg(item.name)" src="{{item.img}}" width="100" height="100">
+        <p *ngIf="!over" style="">{{item.name}}</p>
+<!--        <p *ngIf="over" style="">{{item.price}}</p>-->
+<!--        <p *ngIf="over" style="">{{item.description}}</p>-->
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
